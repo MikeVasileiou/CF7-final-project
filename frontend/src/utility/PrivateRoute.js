@@ -1,16 +1,12 @@
-import { Navigate, useNavigate } from "react-router";
-import Cookies from "universal-cookie";
+import React from 'react';
+import { Navigate, Outlet } from 'react-router-dom';
+import Cookies from 'universal-cookie';
+
 const cookies = new Cookies();
 
-/**
- * 
- */
-const PrivateRoute = ({ children }) => {
-    if (cookies.get('token') == undefined) {
-        return <Navigate to="/login" replace={true}/>;
-    }
-
-    return children;
-}
+const PrivateRoute = () => {
+  const token = cookies.get('token');
+  return token ? <Outlet /> : <Navigate to="/login" replace />;
+};
 
 export default PrivateRoute;
