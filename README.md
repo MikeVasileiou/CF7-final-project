@@ -15,8 +15,7 @@ CF7-final-project/
 
 ## 🚀 Getting Started
 
-### 1. Clone the repo
-```bash
+1. Clone the repo
 git clone https://github.com/MikeVasileiou/CF7-final-project.git
 cd CF7-final-project
 
