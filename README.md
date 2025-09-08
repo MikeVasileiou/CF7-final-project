@@ -1,61 +1,113 @@
-# CF7 Final Project – Simple CRUD with Authentication
+# 🦈 MyShark – CRUD + Auth Full-Stack Project
 
-A simple CRUD (Create, Read, Update, Delete) web application with user authentication.  
-Built as part of the CF7 final project.
-
----
-
-## 🚀 Features
-- User registration & login
-- Secure authentication
-- Create, Read, Update, Delete operations
-- Persistent data storage
-- Responsive design (works on desktop & mobile)
+A full-stack CRUD application with authentication built as a school project.  
+- **Backend**: Node.js, Express, MySQL2, JWT, Bcrypt  
+- **Frontend**: React, React Router, React Query, Axios  
 
 ---
 
-## 🛠️ Tech Stack
-- **Frontend:** HTML, CSS, JavaScript, React
-- **Backend:** Node.js / Express 
-- **Database:**  MySQL 
-- **Auth:** JWT / Sessions 
+## 📂 Project Structure
+CF7-final-project/
+├── backend/ # Express + MySQL2 REST API
+└── frontend/ # React SPA (login + sharks CRUD)
 
 ---
 
-## 📦 Installation
+## 🚀 Getting Started
 
-Clone the repository:
-
+### 1. Clone the repo
 ```bash
 git clone https://github.com/MikeVasileiou/CF7-final-project.git
 cd CF7-final-project
+2. Backend setup
+bash
 
-Install dependencies:
-*bash*
+cd backend
 npm install
+Create a .env file in backend/:
 
-Run the development server:
-*bash*
-npm start
-The app should now be running at http://localhost:3000
+env
 
-🔑 Environment Variables
-Create a .env file in the root of the project and add:
-*bash*
-PORT=3000
-DB_URI=your_database_connection_string
+PORT=3333
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_password
+DB_DATABASE=sharkdb
 JWT_SECRET=your_secret_key
+Set up the database using src/db/create-database-tables.sql.
+Then start the backend:
 
-📸 Screenshots
-(Future add)
+bash
 
-📖 Usage
-Register as a new user
+npm run dev   # starts with nodemon
+Backend runs at: http://localhost:3333
 
-Log in with your credentials
+3. Frontend setup
+bash
 
-Perform CRUD operations (add, edit, delete, view items)
+cd ../frontend
+npm install
+Create a .env file in frontend/:
 
-👨‍💻 Author
-Mike Vasileiou
+env
 
+REACT_APP_API_URL=http://localhost:3333/api
+Start the React app:
+
+bash
+
+npm start
+Frontend runs at: http://localhost:3000
+
+🔑 Authentication
+Register at /register
+
+Login at /login
+
+A JWT token is stored in cookies
+
+Protected routes require Authorization: Bearer <token>
+
+⚙️ Available Scripts
+
+Backend
+bash
+cd backend
+npm run dev   # run with nodemon (watch mode)
+npm start     # run normally
+
+Frontend
+bash
+cd frontend
+npm start     # start dev server
+npm run build # create production build
+📱 PWA Support
+The frontend includes a manifest.json and icons, so the app can be installed on desktop or mobile as a Progressive Web App (PWA).
+Check installability via Chrome DevTools → Application → Manifest.
+
+🛠️ Tech Stack
+
+Backend
+Express
+MySQL2
+JWT
+Bcrypt
+Joi
+Cors
+Helmet
+Morgan
+
+Frontend
+React 18
+React Router 6
+React Query
+Axios
+Universal Cookie
+
+⚠️ Notes
+node_modules/ are not committed — run npm install in both backend & frontend before starting.
+.env files are ignored — create your own with the values above.
+
+📜 License
+This project was built as part of a CF7 assignment.
+Feel free to use it as a learning reference.
