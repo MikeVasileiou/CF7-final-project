@@ -19,14 +19,12 @@ CF7-final-project/
 ```bash
 git clone https://github.com/MikeVasileiou/CF7-final-project.git
 cd CF7-final-project
-2. Backend setup
-bash
 
+2. Backend setup
 cd backend
 npm install
-Create a .env file in backend/:
 
-env
+Create a .env file in backend/:
 
 PORT=3333
 DB_HOST=localhost
@@ -34,32 +32,33 @@ DB_USER=root
 DB_PASSWORD=your_password
 DB_DATABASE=sharkdb
 JWT_SECRET=your_secret_key
+
 Set up the database using src/db/create-database-tables.sql.
 Then start the backend:
 
-bash
-
 npm run dev   # starts with nodemon
+
 Backend runs at: http://localhost:3333
 
 3. Frontend setup
-bash
-
 cd ../frontend
 npm install
+
+
 Create a .env file in frontend/:
 
-env
-
 REACT_APP_API_URL=http://localhost:3333/api
+
+
 Start the React app:
 
-bash
-
 npm start
+
+
 Frontend runs at: http://localhost:3000
 
 🔑 Authentication
+
 Register at /register
 
 Login at /login
@@ -69,19 +68,18 @@ A JWT token is stored in cookies
 Protected routes require Authorization: Bearer <token>
 
 ⚙️ Available Scripts
-
 Backend
-bash
 cd backend
 npm run dev   # run with nodemon (watch mode)
 npm start     # run normally
 
 Frontend
-bash
 cd frontend
 npm start     # start dev server
 npm run build # create production build
+
 📱 PWA Support
+
 The frontend includes a manifest.json and icons, so the app can be installed on desktop or mobile as a Progressive Web App (PWA).
 Check installability via Chrome DevTools → Application → Manifest.
 
