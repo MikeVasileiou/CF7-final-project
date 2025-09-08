@@ -16,10 +16,12 @@ CF7-final-project/
 ## 🚀 Getting Started
 
 1. Clone the repo
+
 git clone https://github.com/MikeVasileiou/CF7-final-project.git
 cd CF7-final-project
 
 2. Backend setup
+
 cd backend
 npm install
 
@@ -40,6 +42,7 @@ npm run dev   # starts with nodemon
 Backend runs at: http://localhost:3333
 
 3. Frontend setup
+
 cd ../frontend
 npm install
 
@@ -67,6 +70,7 @@ A JWT token is stored in cookies
 Protected routes require Authorization: Bearer <token>
 
 ⚙️ Available Scripts
+
 Backend
 cd backend
 npm run dev   # run with nodemon (watch mode)
@@ -85,6 +89,7 @@ Check installability via Chrome DevTools → Application → Manifest.
 🛠️ Tech Stack
 
 Backend
+
 Express
 MySQL2
 JWT
@@ -95,6 +100,7 @@ Helmet
 Morgan
 
 Frontend
+
 React 18
 React Router 6
 React Query
@@ -102,9 +108,11 @@ Axios
 Universal Cookie
 
 ⚠️ Notes
+
 node_modules/ are not committed — run npm install in both backend & frontend before starting.
 .env files are ignored — create your own with the values above.
 
 📜 License
+
 This project was built as part of a CF7 assignment.
 Feel free to use it as a learning reference.
